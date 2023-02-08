@@ -6,16 +6,21 @@ interface RowCompletedProps{
     word: string;
     solution: string;
     
+
+
+    
 }
 
-export default function RowCompleted({word, solution}:RowCompletedProps){
+export default function RowCompleted({word, solution }:RowCompletedProps){
     const arr = Array.from(Array(5));
 
     function checkLetter(letter: string, pos:number):StatusBox{
         if(solution.includes(letter)){
             if(solution[pos]===letter){
+           
                 return "correctLetter"
             }else{
+             
                 return "presentLetter"
             }
         }else{

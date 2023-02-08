@@ -26,6 +26,9 @@ export default function Wordle(){
     const [currentWord, setCurrentWord]=useState<string>("");
     const [completedWords, setCompletedWords]=useState<string[]>([]);
     const [statusGame, setStatusGame]=useState<StatusGame>(StatusGame.onPlay);
+    const [correctLetter, setCorrectLetter] = useState<string[]>([]);
+    const [presentLetter, setPresentLetter] = useState<string[]>([]);
+    const [notPresentLetter, setNotPresentLetter] = useState<string[]>([]);
 
     useWindow('keydown', handleKeyDown)
 
@@ -117,6 +120,8 @@ export default function Wordle(){
               key={i}
               word={word}
               solution={wordOfDay}
+              
+             
            
             />
           ))}

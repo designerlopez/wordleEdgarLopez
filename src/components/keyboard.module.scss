@@ -13,12 +13,13 @@
   .keyboardContainer {
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
+    width: 300px;
     
     margin: 0 auto;
     gap: 5px;
     background: rgba(218, 220, 224, 0.3);
     border-radius: 15px;
+   
   }
   .key {
     @include keybase;
